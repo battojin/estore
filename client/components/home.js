@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-// import Header from './header'
+import Header from './header'
 import { getGoods, getRates } from '../redux/reducers/goodsReducer'
 import Card from './card'
 
@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <div className="item">
         {items.map((item) => {
           return (
