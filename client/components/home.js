@@ -7,6 +7,8 @@ import Card from './card'
 const Home = () => {
   const dispatch = useDispatch()
   const items = useSelector((store) => store.goodsReducer.goods.slice(0, 30))
+  const currencyValue = useSelector((store) => store.goodsReducer.currencyValue)
+  const basketList = useSelector((store) => store.basketReducer.list)
 
   useEffect(() => {
     dispatch(getRates())
@@ -20,10 +22,13 @@ const Home = () => {
       <Header />
       <div className="item">
         {items.map((item) => {
+          const basketGood = basketList.find((good) => good.id === item.id)
           return (
             <Card
               key={item.id}
               item={item}
+              currencyValue={currencyValue}
+              basketGood={basketGood?.quantity}
             />
           )
         })}

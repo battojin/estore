@@ -5,19 +5,21 @@ import Currencies from './currencies'
 import Sorting from './sorting'
 
 const Header = () => {
+  const totalPrice = useSelector((store) => store.basketReducer.totalPrice)
   const currencyValue = useSelector((store) => store.goodsReducer.currencyValue)
+  const totalQuantity = useSelector((store) => store.basketReducer.totalQuantity)
 
   return (
     <div>
       <Link to="/">
         <h1>E-Store for Miscellaneous Stuff</h1>
       </Link>
-      <p>
-        {/* <Link to="/basket">{totalQuantity}</Link> */}
+      <div>
+        <Link to="/basket">{totalQuantity}</Link>
         <Currencies />
         <Sorting />
-        {(currencyValue).toFixed(2)}
-      </p>
+        {(totalPrice * currencyValue).toFixed(2)}
+      </div>
     </div>
   )
 }
