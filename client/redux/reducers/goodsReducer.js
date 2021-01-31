@@ -13,10 +13,17 @@ const initialState = {
   rates: {}
 }
 
+const actualImages = (items) => {
+  return items.map((item) => ({
+    ...item,
+    image: `https://source.unsplash.com/800x600/?${/\w+(?=\s)/gi.exec(item.title)}`
+  }))
+}
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case GET_GOODS: {
-      return { ...state, goods: action.payload.goods }
+      return { ...state, goods: actualImages(action.payload.goods) }
     }
     case GET_RATES: {
       return { ...state, rates: action.payload.rates }

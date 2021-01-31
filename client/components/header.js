@@ -10,7 +10,7 @@ const Header = () => {
   const totalQuantity = useSelector((store) => store.basketReducer.totalQuantity)
 
   return (
-    <div>
+    <header>
       <Link to="/">
         <h1>E-Store for Miscellaneous Stuff</h1>
       </Link>
@@ -20,7 +20,7 @@ const Header = () => {
         <Sorting />
         {(totalPrice * currencyValue).toFixed(2)}
       </div>
-    </div>
+    </header>
   )
 }
 
