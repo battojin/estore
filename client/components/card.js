@@ -6,7 +6,7 @@ const Card = ({ item, currencyValue, basketGood }) => {
   const dispatch = useDispatch()
 
   return (
-    <div>
+    <div className="card">
       <img alt="item" src={item.image} />
       <div>{(item.price * currencyValue).toFixed(2)}</div>
       <div>{item.title}</div>

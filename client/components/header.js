@@ -11,11 +11,11 @@ const Header = () => {
 
   return (
     <header>
-      <Link to="/">
-        <h1>E-Store for Miscellaneous Stuff</h1>
+      <Link style={{ textDecoration: 'none' }} to="/">
+        <h1>The Stuff You Will Never Need Store</h1>
       </Link>
       <div>
-        <Link to="/basket">{totalQuantity}</Link>
+        <Link style={{ textDecoration: 'none' }} to="/basket">{totalQuantity}</Link>
         <Currencies />
         <Sorting />
         {(totalPrice * currencyValue).toFixed(2)}
