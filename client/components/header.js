@@ -15,7 +15,7 @@ const Header = () => {
         <h1>The Stuff You Will Never Need Store</h1>
       </Link>
       <div>
-        <Link style={{ textDecoration: 'none' }} to="/basket">{totalQuantity}</Link>
+        <Link style={{ textDecoration: 'none' }} to="/basket">{totalQuantity}</Link> items
         <Currencies />
         <Sorting />
         {(totalPrice * currencyValue).toFixed(2)}
