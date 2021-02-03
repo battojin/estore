@@ -6,13 +6,13 @@ const Currencies = () => {
   const dispatch = useDispatch()
   return (
     <div>
-      <button type="button" onClick={() => dispatch(updateRates('USD'))}>
+      <button type="button" className="currency" onClick={() => dispatch(updateRates('USD'))}>
         USD
       </button>
-      <button type="button" onClick={() => dispatch(updateRates('EUR'))}>
+      <button type="button" className="currency" onClick={() => dispatch(updateRates('EUR'))}>
         EUR
       </button>
-      <button type="button" onClick={() => dispatch(updateRates('CAD'))}>
+      <button type="button" className="currency" onClick={() => dispatch(updateRates('CAD'))}>
         CAD
       </button>
     </div>

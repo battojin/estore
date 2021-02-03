@@ -2,6 +2,7 @@ body {
     font-size: 1.25em;
     color: black;
     background: #F0EEFF;
+    font-family: serif;
 }
 
 header {
@@ -10,6 +11,12 @@ header {
     margin: 5px;
     text-align: center;
     padding: 10px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1em;
+    margin: 2px;
 }
 
 .item {
@@ -30,7 +37,6 @@ img {
 
 h1 {
     color: #0c0b0b;
-    font-family: sans-serif;
     font-size: 32px;
     font-weight: bold;
     margin-top: 10px;
@@ -39,4 +45,9 @@ h1 {
 
 .no-style {
     text-decoration: none !important;
+}
+
+.currency {
+    // margin-left: 2px;
+    // margin-right: 2px;
 }
