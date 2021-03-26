@@ -18,7 +18,7 @@ const Home = () => {
   }, [dispatch])
 
   return (
-    <div>
+    <div className="mb-4">
       <Header />
       <div className="item">
         {items.map((item) => {

@@ -2,13 +2,6 @@
 
 // Customization
 
-// body {
-//     font-size: 1.25em;
-//     color: black;
-//     background: #F0EEFF;
-//     font-family: serif;
-// }
-
 .item {
     display: flex;
     flex-wrap: wrap;
@@ -16,21 +9,9 @@
     margin: 1.5px;
 }
 
-.card {
-    padding: 10px;
-}
-
 img {
     max-width: 250px;
     max-height: 100%;
-}
-
-h1 {
-    color: #0c0b0b;
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 3px;
 }
 
 .no-style {

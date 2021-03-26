@@ -13,14 +13,20 @@ const Header = () => {
     <div>
       <nav className="nav my-3 justify-content-center">
         <Link style={{ textDecoration: 'none' }} to="/">
-          <h1>The Stuff You Will Never Need Store</h1>
+          <h1 className="text-dark">ONLINE SHOPPING FOR YOU</h1>
         </Link>
       </nav>
       <nav className="navbar navbar-light bg-light my-2 py-3">
-        <div className="container-fluid">
+        <div className="col-2">
           <Link className="navbar-toggler" style={{ textDecoration: 'none' }} to="/basket">{totalQuantity} items in Cart</Link>
-          {(totalPrice * currencyValue).toFixed(2)}
+        </div>
+        <h4 className="col">
+          {(totalPrice * currencyValue).toFixed(1)}
+        </h4>
+        <div className="col-4">
           <Currencies />
+        </div>
+        <div className="col-4">
           <Sorting />
         </div>
       </nav>
