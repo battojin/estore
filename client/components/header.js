@@ -10,17 +10,21 @@ const Header = () => {
   const totalQuantity = useSelector((store) => store.basketReducer.totalQuantity)
 
   return (
-    <header>
-      <Link style={{ textDecoration: 'none' }} to="/">
-        <h1>The Stuff You Will Never Need Store</h1>
-      </Link>
-      <div>
-        <Link style={{ textDecoration: 'none' }} to="/basket">{totalQuantity}</Link> items
-        <Currencies />
-        <Sorting />
-        {(totalPrice * currencyValue).toFixed(2)}
-      </div>
-    </header>
+    <div>
+      <nav className="nav my-3 justify-content-center">
+        <Link style={{ textDecoration: 'none' }} to="/">
+          <h1>The Stuff You Will Never Need Store</h1>
+        </Link>
+      </nav>
+      <nav className="navbar navbar-light bg-light my-2 py-3">
+        <div className="container-fluid">
+          <Link className="navbar-toggler" style={{ textDecoration: 'none' }} to="/basket">{totalQuantity} items in Cart</Link>
+          {(totalPrice * currencyValue).toFixed(2)}
+          <Currencies />
+          <Sorting />
+        </div>
+      </nav>
+    </div>
   )
 }
 

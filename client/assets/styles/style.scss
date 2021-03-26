@@ -2,28 +2,12 @@
 
 // Customization
 
-body {
-    font-size: 1.25em;
-    color: black;
-    background: #F0EEFF;
-    font-family: serif;
-}
-
-header {
-    background: #A55392;
-    display: grid;
-    border-radius: 10px;
-    margin: 5px;
-    text-align: center;
-    padding: 10px;
-}
-
-button {
-    font-family: inherit;
-    font-size: 1em;
-    margin: 2px;
-    border-radius: 5px;
-}
+// body {
+//     font-size: 1.25em;
+//     color: black;
+//     background: #F0EEFF;
+//     font-family: serif;
+// }
 
 .item {
     display: flex;

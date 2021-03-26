@@ -6,19 +6,23 @@ const Sorting = () => {
   const dispatch = useDispatch()
   return (
     <div>
-      <button type="button" onClick={() => dispatch(sortbyPrice('L-H'))}>
-        Low-High
-      </button>
-      <button type="button" onClick={() => dispatch(sortbyPrice('H-L'))}>
-        High-Low
-      </button>
-      <button type="button" onClick={() => dispatch(sortbyName('A-Z'))}>
-        A-Z
-      </button>
-      <button type="button" onClick={() => dispatch(sortbyName('Z-A'))}>
-        Z-A
-      </button>
+      Sort by:
+      <div className="btn-group ml-1">
+        <button type="button" className="btn btn-outline-dark" onClick={() => dispatch(sortbyPrice('L-H'))}>
+          Low Price
+        </button>
+        <button type="button" className="btn btn-outline-dark" onClick={() => dispatch(sortbyPrice('H-L'))}>
+          High Price
+        </button>
+        <button type="button" className="btn btn-outline-dark" onClick={() => dispatch(sortbyName('A-Z'))}>
+          A-Z
+        </button>
+        <button type="button" className="btn btn-outline-dark" onClick={() => dispatch(sortbyName('Z-A'))}>
+          Z-A
+        </button>
+      </div>
     </div>
+
   )
 }
 

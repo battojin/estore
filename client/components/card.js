@@ -6,20 +6,23 @@ const Card = ({ item, currencyValue, basketGood }) => {
   const dispatch = useDispatch()
 
   return (
-    <div className="card">
+    <div className="card p-1">
       <img alt="item" src={item.image} />
-      <div>{(item.price * currencyValue).toFixed(2)}</div>
-      <div>{item.title}</div>
-      <div>Count: {basketGood}</div>
-      <button
-        type="button"
-        onClick={() => {
-          dispatch(getItem(item.id))
-          dispatch(getHeaderData())
-        }}
-      >
-        Add to Basket
-      </button>
+      <div className="card-body">
+        <div>Price: {(item.price * currencyValue).toFixed(2)}</div>
+        <p>{item.title}</p>
+        <p className="mb-1">In Basket: {basketGood}</p>
+        <button
+          type="button"
+          className="btn btn-light"
+          onClick={() => {
+            dispatch(getItem(item.id))
+            dispatch(getHeaderData())
+          }}
+        >
+          Add to Basket
+        </button>
+      </div>
     </div>
   )
 }
